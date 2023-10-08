@@ -276,3 +276,33 @@ int main()
     printf("Identical");
    }
 }
+
+//Ans to the Question No: 3(D) OR
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+   char str[10];
+   scanf("%s",&str);
+
+   printf("Age = %c%c, ",str[0],str[1]);
+   
+   if(str[2]=='T')
+   {
+    printf("Texpayer, ");
+   }
+   else
+   {
+    printf("Not a Texpayer, ");
+   }
+
+   if(str[3]=='L')
+   {
+    printf("Landowner");
+   }
+   else
+   {
+    printf("Not a Landowner");
+   }
+}
