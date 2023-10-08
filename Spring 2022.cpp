@@ -229,3 +229,50 @@ printf("Main Daigonal = %d\n",sum1);
 printf("Second Daigonal = %d\n",sum2);
  
 }
+
+//Ans to the Question No: 3(C)
+//   Question:
+    // #include<stdio.h>
+    // #include<string.h>
+    // int main()
+    // {
+    //    char s1[8]="IIUC",s2[8]="CSE",s3[8]="1121";
+    //    printf("%d\n",strlen(s1));
+    //    printf("%s\n",strcpy(s1,s2));
+    //    printf("%s\n",strcat(s2,s3));
+    //    printf("%s\n",strrev(s2));
+    // }
+
+//Output:
+
+        4
+        CSE
+        CSE1121
+        1211ESC
+
+
+//Ans to the Question No: 3(D)
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+   char s1[1000];
+   scanf("%s",&s1);
+   int f=0;
+   for(int i=0;i<strlen(s1);i++)
+   {
+    if(s1[i]!=s1[0])
+    {
+        f=1;
+    }
+   }
+   if(f==1)
+   {
+    printf("Not Identical");
+   }
+   else
+   {
+    printf("Identical");
+   }
+}
