@@ -160,3 +160,37 @@ int main()
         printf("Not Strictly Increasing\n");
     }
 }
+
+//Ans to the Question No: 3(C)
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[10000];
+    gets(str);
+    int n=strlen(str);
+    
+    int m=200;
+    int newarr[m];
+    for(int i=0;i<m;i++)
+    {
+        newarr[i]=0;
+    }
+
+    int sum=0;
+    for(int i=0;i<n;i++)
+    {
+        newarr[str[i]]++;
+        if(str[i]=='a' || str[i]=='e' || str[i]=='o'||str[i]=='u'||str[i]=='i')sum++;
+    }
+
+    for(int i=0;i<m;i++)
+    {
+        if(i=='a' || i=='e' || i=='o'||i=='u'||i=='i')
+        {
+            printf("%c => %d (%.2f)%%\n",i,newarr[i],(newarr[i]*100.0/sum));
+        }
+    }
+
+}
