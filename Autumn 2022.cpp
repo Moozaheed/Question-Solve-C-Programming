@@ -76,6 +76,43 @@ int main()
     }
 }
 
+//Ans to the Question No: 2(C)
+
+
+#include<stdio.h>
+
+int divisorcheck(int x,int y)
+{
+    if(x%y==0  || y%x==0)return 1;
+    else return 0;
+}
+
+int main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    int c=divisorcheck(x,y);
+    printf("%d",c);
+}
+
+//Ans to the Question No: 2(C)
+
+#include<stdio.h>
+
+double oddcheck(int x,int y)
+{
+    if(x%2==1 && y%2==1)return 1.1;
+    if(x%2==0 && y%2==0)return 2.0;
+    return 0.1;
+}
+
+int main()
+{
+    int x,y;
+    scanf("%d %d",&x,&y);
+    double c=oddcheck(x,y);
+    printf("%lf",c);
+}
 
 //Ans to the Question No: 3(A)
 
@@ -193,4 +230,47 @@ int main()
         }
     }
 
+}
+
+//Ans to the Question No: 3(C)
+
+#include<stdio.h>
+#include<string.h>
+struct Player
+{
+    char name[24];
+    char country[24];
+    int match_played;
+    int goals;
+    double pass_accuracy;
+};
+
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    Player arr[n];
+
+    for(int i=0;i<n;i++)
+    {
+        scanf("%s",&arr[i].name);
+        scanf("%s",&arr[i].country);
+        scanf("%d",&arr[i].match_played);
+        scanf("%d",&arr[i].goals);
+        scanf("%lf",&arr[i]. pass_accuracy);
+    }
+
+    double mx=0;
+    char ans1[24],ans2[24];
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i].goals>mx)
+        {
+            mx=arr[i].goals;
+            strcpy(ans1,arr[i].name);
+            strcpy(ans2,arr[i].country);
+        }
+    }
+    printf("%s\n%s",ans1,ans2);
 }

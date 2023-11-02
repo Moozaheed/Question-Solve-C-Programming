@@ -124,6 +124,158 @@ else
 }
 
 
+
+
+
+//Ans to the Question No: 2(A)
+
+double process(int a,float b,float c)
+{
+
+}
+
+void drawcircle(int a,int b,double c)
+{
+
+}
+
+
+//Ans to the Question No: 2(B)
+
+    i) Code: 
+                #include <stdio.h>
+                int x=30;
+                int fun1()
+                {
+                    x=x+15;
+                    return x;
+                }
+                int fun2()
+                {
+                    int x=20;
+                    return x;
+                }
+                int fun3()
+                {
+                    x=x-10;
+                    return x;
+                }
+                int main()
+                {
+                    int x=5;
+                    printf("x = %d\n",x);
+                    printf("x = %d\n",fun1());
+                    printf("x = %d\n",fun2());
+                    printf("x = %d\n",fun3()); 
+                }
+
+    Output: 
+                x = 5
+                x = 45
+                x = 20
+                x = 35
+
+
+    ii)Code: 
+
+                #include <stdio.h>
+                int x,q=1;
+                void ctg(int x)
+                {
+                    static int j=1;
+                    x*=j;
+                    printf("x = %d\n",x);
+                    j++;
+                }
+
+                int main()
+                {
+                    int i;
+                    for(i=2;i<=5;i++)
+                    {
+                        ctg(i*i+q);
+                        q++;
+                    }
+                }
+
+    Output:
+            x = 5
+            x = 22
+            x = 57
+            x = 116
+
+
+//Ans to the Question No: 2(C)
+
+    Code:
+            #include <stdio.h>
+            void rec(int n)
+            {
+                if(n==0)return;
+                printf("%d",n%2);
+                rec(n/2);
+            }
+
+            int main()
+            {
+                // My ID is : C231534
+                // So, x=4 ---> 2x=24
+                rec(24);
+            }
+
+
+    Output: 00011
+
+
+//Ans to the Question No: 2(D)
+
+#include<stdio.h>
+
+int multiple(int a,int b)
+{
+    if(a%b==0)return 1;
+    else return 0;
+}
+
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    int c=multiple(a,b);
+    printf("%d",c);
+}
+
+
+
+//Ans to the Question No: 2(D) OR
+
+#include<stdio.h>
+
+int factors(int a)
+{
+    int sum=0;
+
+    for(int i=2;i<n;i++)
+    {
+        if(a%i==0)
+        {
+            sum+=i;
+        }
+    }
+
+    return sum;
+}
+
+int main()
+{
+    int a,b;
+    scanf("%d",&a);
+    int c=factors(a);
+    printf("%d",c);
+}
+
+
+
 //Ans to the Question No: 3(A)
 
 #include<stdio.h>
@@ -305,4 +457,87 @@ int main()
    {
     printf("Not a Landowner");
    }
+}
+
+
+#include<stdio.h>
+#include<string.h>
+struct Player
+{
+    char name[24];
+    char country[16];
+    int runs;
+    double average;
+};
+
+//Ans to the Question No: 4(D)
+
+int main()
+{
+    Player arr[10];
+
+    for(int i=0;i<10;i++)
+    {
+        scanf("%s",&arr[i].name);
+        scanf("%s",&arr[i].country);
+        scanf("%d",&arr[i].runs);
+        scanf("%lf",&arr[i].average);
+    }
+
+    double mx=0;
+    char ans[24];
+    for(int i=0;i<10;i++)
+    {
+        if(arr[i].average>mx)
+        {
+            mx=arr[i].average;
+            strcpy(ans,arr[i].name);
+        }
+    }
+    printf("%s",ans);
+
+}
+
+
+//Ans to the Question No: 4(D) OR
+
+#include<stdio.h>
+#include<string.h>
+struct CT
+{
+    char id[10];
+    char name[100];
+    int ct1_marks;
+    int ct2_marks;
+};
+
+
+int maxx(int a,int b)
+{
+    if(a<b)return b;
+    else return a;
+}
+
+
+int main()
+{
+
+    int n;
+    scanf("%d",&n);
+
+    CT arr[n];
+
+    for(int i=0;i<n;i++)
+    {
+        scanf("%s",&arr[i].id);
+        scanf("%s",&arr[i].name); 
+        scanf("%d",&arr[i].ct1_marks);
+        scanf("%d",&arr[i].ct2_marks);
+    }
+
+    for(int i=0;i<n;i++)
+    {
+        printf("%d\n",maxx(arr[i].ct1_marks,arr[i].ct2_marks));
+    }
+
 }
