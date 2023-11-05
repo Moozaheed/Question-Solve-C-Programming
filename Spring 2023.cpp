@@ -151,3 +151,48 @@ int main()
         7
         cseiiuc
         cseiiuc
+
+
+//Ans to the Question No: 4(C)
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    scanf("%s", &str);
+    
+    for(int i=0;i<strlen(str);i++)
+    {
+        char ch=str[i];
+        if(ch>='a' && ch<='z')
+        {
+            ch+=3;
+            if (ch > 'z') 
+            {
+                ch -= 26; 
+            }
+        }
+        else if(ch>='A' && ch<='Z')
+        {
+            ch+=3;
+            if (ch > 'Z') 
+            {
+                ch -= 26;  
+            }
+        }
+        else if (ch>='0' && ch<='9') 
+        {
+            ch-=2;
+            if(ch <'0')
+            {
+                ch+=10;
+            } 
+        }
+        else
+        {
+            continue;
+        }
+        printf("%c",ch);
+    }
+}

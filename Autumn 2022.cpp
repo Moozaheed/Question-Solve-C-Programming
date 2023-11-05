@@ -232,7 +232,7 @@ int main()
 
 }
 
-//Ans to the Question No: 3(C)
+//Ans to the Question No: 4(C)
 
 #include<stdio.h>
 #include<string.h>

@@ -459,6 +459,7 @@ int main()
    }
 }
 
+//Ans to the Question No: 4(D)
 
 #include<stdio.h>
 #include<string.h>
@@ -469,8 +470,6 @@ struct Player
     int runs;
     double average;
 };
-
-//Ans to the Question No: 4(D)
 
 int main()
 {
@@ -495,7 +494,6 @@ int main()
         }
     }
     printf("%s",ans);
-
 }
 
 
